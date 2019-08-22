@@ -3,7 +3,7 @@ from rest_framework import generics
 from .serializers import UserProfileSerializer, UserSerializer, ArticleSerializer, CategorySerializer
 from .models import User, UserProfile, Article, Category
 
-class UserProfileList(generics.ListAPIView):
+class UserProfileList(generics.ListCreateAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
 
@@ -19,7 +19,7 @@ class ArticleDetail(generics.RetrieveAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
 
-class CategoryList(generics.ListAPIView):
+class CategoryList(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
