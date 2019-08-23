@@ -7,5 +7,5 @@ urlpatterns = [
     path('category/', views.CategoryList.as_view()),
     path('users/', views.UserProfileList.as_view()),
     path('users/<int:pk>/', views.UserProfileDetail.as_view()),
-    path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/', include('rest_auth.urls'))
 ]
