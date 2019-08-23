@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import include, path
 from . import views
 
 urlpatterns = [
@@ -7,4 +7,5 @@ urlpatterns = [
     path('category/', views.CategoryList.as_view()),
     path('users/', views.UserProfileList.as_view()),
     path('users/<int:pk>/', views.UserProfileDetail.as_view()),
+    path('rest-auth/', include('rest_auth.urls')),
 ]
